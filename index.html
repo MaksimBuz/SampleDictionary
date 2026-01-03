@@ -1,49 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/styles/reset.css">
-    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-    <main class="main">
+    <main class="container">
         <h1>Dictionary</h1>
-        <form action="" class="form" id="form">
-            <div class="form-group">
-                <input type="text" name="word" id="word-input" value="" placeholder="Enter a word">
-            </div>
-            <button type="submit">Search</button>
-        </form>
-        <div class="error">
-            Word not found
-        </div>
-        <div class="reults">
-            <div class="results-info">
-                <div class="results-word">Dog</div>
-                <div class="results-sound">
-                    <img src="./assets/img/sound.svg" alt="" srcset="">
-                </div>
-            </div>
-            <div class="results-list">
-                <div class="results-item">
-                    <div class="results-item__part">Noun</div>
-                    <div class="results-item__defs">
-                        <div class="results-item__defs">
-                            <p></p>
-                            <div class="results-item-exapml"></div>
-                        </div>
-                    </div>
+
+        <form class="row g-3 needs-validation" id="form" novalidate>
+            <div class="col-md-4 position-relative">
+                <label for="word-input" class="form-label">Word</label>
+                <input type="text" class="form-control" id="word-input" value="eternity" required>
+                <div class="valid-tooltip">
+                    Looks good!
                 </div>
             </div>
 
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Submit form</button>
+            </div>
+        </form>
+        <div class="reults">
+            <div class="d-flex flex-row mb-3 justify-content-between align-items-center">
+                <img class="results-sound col-1" src="./assets/img/sound.svg" alt="">
+                <span class="col-11 fs-1 results-word">eternity</span>
+            </div>
+            <div class="results-list mb-3">
+          
+            </div>
+            <div>
+                <h1>Synonyms</h1>
+                <ul class="result-synonyms list-group">
+
+                </ul>
+            </div>
         </div>
     </main>
-    <script src="./assets/js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/bootstrp.js"></script>
+  <script type="module">
+import translate from 'https://cdn.jsdelivr.net/npm/translate@3.0.1/+esm'
+</script>
+
+    <script src="./assets/js/scripts.js" type="module"></script>
 </body>
 
 </html>
